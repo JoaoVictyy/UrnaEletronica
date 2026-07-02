@@ -1,6 +1,6 @@
 const somTecla = new Audio("./sons/tecla.mp3.wav");
 const somConfirma = new Audio("./sons/confirma.mp3.wav");
-const somFim = new Audio("./sons/fim.mp3.wav");
+const somFim = new Audio("./sons/fim.mp3.mp3");
 
 const etapas = [
     {
