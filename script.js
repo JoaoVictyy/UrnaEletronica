@@ -20,7 +20,7 @@ const etapas = [
         numeros: 2,
         candidatos: [
             { numero: "40", nome: "João Campos", partido: "PCM - Partido Cabrito Meloso", foto: "./img/CabritoMeloso.png" },
-            { numero: "67", nome: "Sergio Issao", partido: "PMÇ - Partido Muruçus", foto: "./img/Sergio.png" }
+            { numero: "67", nome: "Sergio Issao", partido: "PMÇ - Partido Muruçus", foto: "./img/Sergio.jpeg" }
         ]
     }
 ];
