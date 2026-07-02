@@ -10,8 +10,8 @@ const etapas = [
         candidatos: [
             { numero: "40677", nome: "Amanda Garcia", partido: "PCM - Partido Cabrito Meloso", foto: "./img/CabritaAmanda.png" },
             { numero: "40676", nome: "Nicóle Oliveira", partido: "PCM - Partido Cabrito Meloso", foto: "./img/CabritaNicole.png" },
-            { numero: "11111", nome: "Gabriel Bispo", partido: "PMÇ - Partido Muruçus", foto: "img/vereador3.jpg" },
-            { numero: "22222", nome: "Gustavo seila", partido: "PMÇ - Partido Muruçus", foto: "img/vereador4.jpg" }
+            { numero: "67429", nome: "Gabriel Bispo", partido: "PMÇ - Partido Muruçus", foto: "./img/gabriel.png" },
+            { numero: "67469", nome: "Miguel Salin", partido: "PMÇ - Partido Muruçus", foto: "./img/miguel.png" }
         ]
     },
     {
@@ -20,7 +20,7 @@ const etapas = [
         numeros: 2,
         candidatos: [
             { numero: "40", nome: "João Campos", partido: "PCM - Partido Cabrito Meloso", foto: "./img/CabritoMeloso.png" },
-            { numero: "67", nome: "Sergio Issao", partido: "PMÇ - Partido Muruçus", foto: "img/prefeito2.jpg" }
+            { numero: "67", nome: "Sergio Issao", partido: "PMÇ - Partido Muruçus", foto: "./img/Sergio.png" }
         ]
     }
 ];
