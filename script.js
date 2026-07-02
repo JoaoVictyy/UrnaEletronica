@@ -1,3 +1,7 @@
+const somTecla = new Audio("./sons/tecla.mp3");
+const somConfirma = new Audio("./sons/confirma.mp3");
+const somFim = new Audio("./sons/fim.mp3");
+
 const etapas = [
     {
         cargo: "VEREADOR",
@@ -366,34 +370,31 @@ function mostrarResultado() {
     document.getElementById("modalResultado").classList.add("ativo");
 }
 
-function tocarSom(tipo) {
-    const audio = new AudioContext();
-    const oscilador = audio.createOscillator();
-    const ganho = audio.createGain();
+function tocarSom(tipo){
 
-    oscilador.connect(ganho);
-    ganho.connect(audio.destination);
+    let som;
 
-    if (tipo === "tecla") {
-        oscilador.frequency.value = 600;
-        ganho.gain.value = 0.08;
-        oscilador.start();
-        oscilador.stop(audio.currentTime + 0.08);
+
+    if(tipo === "tecla"){
+        som = somTecla;
+    }
+    
+    if(tipo === "confirma"){
+        som = somConfirma;
     }
 
-    if (tipo === "confirma") {
-        oscilador.frequency.value = 900;
-        ganho.gain.value = 0.12;
-        oscilador.start();
-        oscilador.stop(audio.currentTime + 0.2);
+
+    if(tipo === "fim"){
+        som = somFim;
     }
 
-    if (tipo === "fim") {
-        oscilador.frequency.value = 1200;
-        ganho.gain.value = 0.15;
-        oscilador.start();
-        oscilador.stop(audio.currentTime + 0.35);
-    }
+    if(!som) return;
+
+    som.pause();
+    som.currentTime = 0;
+
+    som.play().catch(()=>{});
+
 }
 
 function fecharResultado() {
