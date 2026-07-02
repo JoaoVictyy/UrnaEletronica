@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Urna Eletrônica</title>
+    <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+
+    <main class="urna">
+        <section class="tela">
+            <div class="topo">
+                <p>SEU VOTO PARA</p>
+                <button class="btn-ver-candidatos" onclick="abrirPainelCandidatos()">
+                    Ver candidatos
+                </button>
+                <h2 id="cargo">VEREADOR</h2>
+            </div>
+
+            <div class="numero-area">
+                <p>Número:</p>
+                <div id="numeros" class="numeros"></div>
+            </div>
+
+            <div id="info" class="info">
+                <p>Digite o número do candidato</p>
+            </div>
+
+            <div class="rodape">
+                <p>Aperte:</p>
+                <p><strong>CONFIRMA</strong> para confirmar este voto</p>
+                <p><strong>CORRIGE</strong> para reiniciar este voto</p>
+            </div>
+        </section>
+
+        <section class="lado">
+            <div class="logo">
+                <div class="icone">☰</div>
+                <h1>JUSTIÇA<br>SESC</h1>
+            </div>
+
+            <div class="teclado">
+                <button onclick="digitar('1')">1</button>
+                <button onclick="digitar('2')">2</button>
+                <button onclick="digitar('3')">3</button>
+                <button onclick="digitar('4')">4</button>
+                <button onclick="digitar('5')">5</button>
+                <button onclick="digitar('6')">6</button>
+                <button onclick="digitar('7')">7</button>
+                <button onclick="digitar('8')">8</button>
+                <button onclick="digitar('9')">9</button>
+                <button class="zero" onclick="digitar('0')">0</button>
+            </div>
+
+            <div class="acoes">
+                <button class="branco" onclick="votarBranco()">BRANCO</button>
+                <button class="corrige" onclick="corrigir()">CORRIGE</button>
+                <button class="confirma" onclick="confirmar()">CONFIRMA</button>
+            </div>
+        </section>
+    </main>
+
+    <div class="bts">
+
+        <button class="btn-resultado" onclick="abrirSenha()">
+            Ver Resultado
+        </button>
+
+        <button class="btn-zerar" onclick="zerarEleicao()">Zerar eleição</button>
+
+    </div>
+
+    <div id="modalSenha" class="modal">
+        <div class="modal-conteudo senha-modal">
+
+            <h2>Área Restrita</h2>
+
+            <p>Digite a senha para visualizar o resultado da eleição</p>
+
+            <input type="password" id="inputSenha" placeholder="Senha" maxlength="20">
+
+            <div class="botoes-senha">
+                <button onclick="fecharSenha()" class="cancelar">Cancelar</button>
+                <button onclick="verificarSenha()" class="entrar">Entrar</button>
+            </div>
+
+        </div>
+    </div>
+
+    <div id="modalResultado" class="modal">
+        <div class="modal-conteudo">
+            <button class="fechar-modal" onclick="fecharResultado()">×</button>
+            <h1>Resultado da Eleição</h1>
+            <div id="resultadoConteudo"></div>
+        </div>
+    </div>
+
+    <div id="painelLateral" class="painel-lateral">
+        <button class="fechar-painel" onclick="fecharPainelCandidatos()">×</button>
+        <h2 id="tituloPainel">Candidatos</h2>
+        <div id="listaPainelCandidatos"></div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
