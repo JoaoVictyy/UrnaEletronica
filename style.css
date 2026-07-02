@@ -440,3 +440,116 @@ body {
   font-weight: bold;
   color: #0b3d91;
 }
+
+@media (max-width: 520px) {
+  body {
+    padding: 10px;
+  }
+
+  .urna {
+    padding: 12px;
+    border-radius: 6px;
+  }
+
+  .topo h2 {
+    font-size: 24px;
+  }
+
+  .topo p,
+  .numero-area p {
+    font-size: 16px;
+  }
+
+  .numero-box {
+    width: 36px;
+    height: 46px;
+    font-size: 26px;
+  }
+
+  .info {
+    font-size: 16px;
+  }
+
+  .candidato-layout {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .foto-candidato {
+    width: 95px;
+    height: 120px;
+  }
+
+  .teclado button {
+    height: 50px;
+    font-size: 22px;
+  }
+
+  .acoes button {
+    width: 100%;
+  }
+
+  .modal-conteudo {
+    width: 92%;
+    padding: 20px;
+  }
+
+  .painel-lateral {
+    width: 85%;
+    right: -85%;
+  }
+
+  .btn-ver-candidatos {
+    position: static;
+    margin-top: 10px;
+  }
+}
+
+@media (max-width: 950px) {
+  body {
+    padding: 20px;
+    align-items: flex-start;
+  }
+
+  .urna {
+    width: 100%;
+    max-width: 520px;
+    flex-direction: column;
+    padding: 18px;
+    gap: 18px;
+  }
+
+  .tela {
+    height: auto;
+    min-height: 420px;
+    padding: 18px;
+  }
+
+  .lado {
+    width: 100%;
+  }
+
+  .logo {
+    height: 65px;
+    margin-bottom: 18px;
+  }
+
+  .teclado {
+    max-width: 360px;
+    margin: 0 auto;
+  }
+
+  .acoes {
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  .btn-resultado,
+  .btn-zerar {
+    position: static;
+    margin: 10px auto;
+    display: block;
+    width: 90%;
+    max-width: 420px;
+  }
+}
